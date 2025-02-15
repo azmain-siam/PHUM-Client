@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <AdminLayout />,
+    element: <App />,
     children: adminRoutes,
   },
   {
