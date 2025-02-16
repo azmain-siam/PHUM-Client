@@ -6,12 +6,13 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
   const [login, { data, error }] = useLoginMutation();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const userInfo = {
       ...data,
     };
 
-    login(userInfo);
+    const res = await login(userInfo);
+    console.log(res);
   };
 
   console.log("Data =>", data);
